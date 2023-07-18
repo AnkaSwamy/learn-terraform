@@ -27,7 +27,7 @@ default = "Devops training"
 variable "courses" {
 default= [
 "DevOps",
-"AWS"
+"AWS",
 "python"
 ]
 }
