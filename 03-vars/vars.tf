@@ -22,6 +22,7 @@ value= "value of sample-ext - ${var.sample-ext}"
 variable "course" {
 default = "Devops training"
 }
+
 #List
 variable "courses" {
 default= [
@@ -31,10 +32,11 @@ default= [
 ]
 }
 #Map
-variable "Course_details" {
+
+variable "course_details" {
 default= {
-DevOps= {
-name= "Devops"
+Devops= {
+name= "devops"
 timings= "7AM"
 duration= "90days"
 }
@@ -48,9 +50,9 @@ duration= 99
 output "course" {
 value= var.course
 }
-output "course" {
+output "courses" {
 value= var.courses
 }
-output "Course_details" {
-value= var.Courses_details
+output "course_details" {
+value= var.courses_details
 }
