@@ -1,8 +1,8 @@
-resource "ec2_instance" "web" {
+resource "aws_instance" {
   ami  = "ami-03265a0778a880afb"
   instance_type          = "t3.micro"
   tags = {
-    Terraform   = "Helloworld"
+    name   = "Helloworld"
 
   }
 }
