@@ -26,8 +26,9 @@ default = "Devops training"
 #List
 variable "courses" {
 default= [
-"Devopsmain",
-"docker"
+"DevOps",
+"AWS"
+"python"
 ]
 }
 #Map
@@ -50,9 +51,11 @@ duration= 99
 output "course" {
 value= var.course
 }
+
 output "courses" {
 value= var.courses[1]
 }
+
 output "course_details" {
 value= var.course_details[ "Devops" ]
 }
