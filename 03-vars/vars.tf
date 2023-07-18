@@ -25,7 +25,7 @@ default = "Devops training"
 #List
 variable "courses" {
 default= [
-"DevOps"
+"Devopsmain"
 "Aws"
 "python"
 ]
@@ -40,8 +40,8 @@ duration= "90days"
 }
 AWS= {
 name = "aws"
-time="8pm"
-duration=99
+time= "8pm"
+duration= 99
 }
 }
 }
