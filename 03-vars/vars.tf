@@ -51,8 +51,8 @@ output "course" {
 value= var.course
 }
 output "courses" {
-value= var.courses
+value= var.courses[1]
 }
 output "course_details" {
-value= var.courses_details[ "Devops" ]
+value= var.course_details[ "Devops" ]
 }
