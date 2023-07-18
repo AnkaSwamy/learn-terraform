@@ -21,11 +21,14 @@ value= data.aws_security_group.selected.id
 }
 
 data "aws_ami" "example" {
-  executable_users = ["aws-marketplace"]
+  executable_users = ["973714476881"]
   most_recent      = true
   name_regex       = "Centos-8-DevOps-Practice"
 
 }
 output "ami" {
 value = data.aws_ami.example.id
+}
+provide "aws" {
+region "us-east-1"
 }
