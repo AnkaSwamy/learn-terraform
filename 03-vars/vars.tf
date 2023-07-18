@@ -26,7 +26,7 @@ default = "Devops training"
 #List
 variable "courses" {
 default= [
-"Devopsmain"
+"Devopsmain",
 "docker"
 ]
 }
