@@ -14,7 +14,7 @@ output "sample1" {
 value= var.sample1
 }
 output "sample-ext" {
-value= "value of sample-ext - ${var.sample-ext}"
+value= "value of sample-ext - ${var.sample-ext} - ${var.sample}"
 }
 
 
@@ -68,6 +68,7 @@ value = var.env
 }
 
 variable "url" { }
+
 output "url" {
 value= var.url
 }
