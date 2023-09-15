@@ -1,3 +1,3 @@
-module "sample1" {
+module "sample" {
   source = "./ec2"
 }
