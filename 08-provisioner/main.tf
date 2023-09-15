@@ -18,7 +18,7 @@
 
     inline = [
       "sudo labauto ansible",
-      "ansible-pull -i localhost, -u https://github.com/AnkaSwamy/roboshop-ansible.git main.yml -e env=dev -e role_name=frontend"
+      "ansible-pull -i localhost, -u https://github.com/AnkaSwamy/roboshop-ansible main.yml -e env=dev -e role_name=frontend"
     ]
   }
 
