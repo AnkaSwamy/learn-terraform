@@ -4,7 +4,7 @@
    vpc_security_group_ids = ["sg-0abba694acb6b6339"]
 
    tags = {
-     Name = "Pro"
+     Name = "Iac"
    }
 
    provisioner "remote-exec" {
