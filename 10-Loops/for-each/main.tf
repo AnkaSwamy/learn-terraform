@@ -16,14 +16,14 @@ data "aws_ami" "example" {
 variable "instances"{
   default= {
     frontend = {
-      name= frontend
+      name= "frontend"
     }
     catalogue = {
-      name= catalogue
+      name= "catalogue"
       instance_type = "t3.nano"
     }
     cart = {
-      name= cart
+      name= "cart"
       instance_type = "t3.nano"
     }
   }
