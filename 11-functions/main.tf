@@ -3,6 +3,10 @@ variable "class"{
 }
 #print the same in capital letters
 
+#output "class"{
+#  value=upper(var.class)
+#}
+
 output "class"{
-  value=upper(var.class)
+  value=var.class
 }
