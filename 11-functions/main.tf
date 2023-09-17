@@ -18,8 +18,9 @@ output "fruits"{
   value = length(var.fruits)
 
 }
+#using elememt()
 output "fruits_0"{
-  value = var.fruits[4]
+  value = element(var.fruits,4)
 
 }
 
