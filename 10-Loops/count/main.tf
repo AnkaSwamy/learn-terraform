@@ -1,6 +1,6 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
-  count         = 3
+  count     = 3
   instance_type = "t3.micro"
 
   tags = {
