@@ -10,3 +10,11 @@ variable "class"{
 output "class"{
   value=var.class
 }
+
+variable "fruits"{
+  default = ["apple","banana","orange"]
+}
+output "fruits"{
+  value = length(var.fruits)
+
+}
