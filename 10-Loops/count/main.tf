@@ -1,10 +1,10 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.example.id
-  count     = 3
+  count     = length(var.instances)
   instance_type = "t3.micro"
 
   tags = {
-    Name = "loops"
+    Name =element(var.instances,count.index)
   }
 }
 
