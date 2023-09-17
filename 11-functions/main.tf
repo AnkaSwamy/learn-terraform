@@ -18,6 +18,11 @@ output "fruits"{
   value = length(var.fruits)
 
 }
+output "fruits_0"{
+  value = var.fruits[4]
+
+}
+
 
 variable "classes" {
   default = {
@@ -35,5 +40,5 @@ output "devops_topics" {
   value= var.classes["devops"] ["topics"]
 }
 output "aws_topics" {
-  value= lookup(var.classes,"aws",null)
+  value= lookup(lookup(var.classes,"aws","topics", "no topics so far"))
 }
