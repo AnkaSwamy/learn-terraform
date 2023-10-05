@@ -1,8 +1,8 @@
-output "sample" {
-value = "Hello World"
+output "firstterraform" {
+value = "Hello Terraform World"
 }
 
-output "sample1" {
-value = 1000
+output "fees" {
+value = 20000
 }
 
