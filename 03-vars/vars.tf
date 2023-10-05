@@ -72,3 +72,9 @@ variable "url" { }
 output "url" {
 value= var.url
 }
+
+variable "name" { }
+
+output "name" {
+  value= var.name
+}
