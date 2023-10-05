@@ -1,45 +1,54 @@
-variable "class"{
-  default= "devops"
-}
-#print the same in capital letters
-
-#output "class"{
-#  value=upper(var.class)
-#}
-
-output "class"{
-  value=var.class
+variable "class" {
+  default = "devops"
 }
 
-variable "fruits"{
-  default = ["apple","banana","orange"]
+## Print the same in capital leetters
+output "class" {
+  value = upper(var.class)
 }
-output "fruits"{
+
+variable "fruits" {
+  default = ["apple", "banana", "orange"]
+}
+
+output "fruit_count" {
   value = length(var.fruits)
-
 }
-#using elememt()
-output "fruits_0"{
-  value = element(var.fruits,4)
-
-}
-
 
 variable "classes" {
   default = {
-    devops={
-      name="devops"
-      topics=["jenkins", "docker"]
+    devops = {
+      name   = "devops"
+      topics = ["jenkins", "docker"]
     }
-    aws={
-      name="aws"
+    aws = {
+      name = "aws"
     }
   }
 }
 
 output "devops_topics" {
-  value= var.classes["devops"] ["topics"]
+  value = var.classes["devops"]["topics"]
 }
+
 output "aws_topics" {
-  value= lookup(lookup(var.classes,"aws",null), "topics", "no topics so far")
+   value = lookup(lookup(var.classes, "aws", null), "topics", "No Topics So far")
 }
+
+#output "aws_topics" {
+#  value = lookup(lookup(var.classes, "aws", null), "topics", null) == null ? "No AWS Training So far" : lookup(lookup(var.classes, "aws", null), "topics", null)
+#}
+
+output "fruit_4" {
+  value = element(var.fruits, 4)
+}
+
+#variable "a" {
+#  default = 100
+#}
+#
+#output "a" {
+#  value = var.a > 50  ? "Surplus Quantity" : "Less Quantity"
+#
+#  ] ` we12
+#}
