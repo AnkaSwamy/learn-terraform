@@ -17,6 +17,7 @@ variable "instances" {
     shipping  = {}
     rabbitmq  = {}
     payment   = {}
+    dispatch  = {}
 
   }
 }
