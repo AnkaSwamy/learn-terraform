@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.example.id
   instance_type          = "t3.micro"
-  vpc_security_group_ids = ["sg-08b043c018c643809"]
+  vpc_security_group_ids = ["sg-0abba694acb6b6339"]
 
   tags = {
     Name = "HelloWorld"
@@ -18,14 +18,14 @@ resource "aws_instance" "web" {
 
     inline = [
       "sudo labauto ansible",
-      "ansible-pull -i localhost, -U https://github.com/raghudevopsb73/roboshop-ansible main.yml -e env=dev -e role_name=frontend"
+      "ansible-pull -i localhost, -U https://github.com/AnkaSwamy/roboshop-ansible.git main.yml -e env=dev -e role_name=frontend"
     ]
   }
 
 }
 
 data "aws_ami" "example" {
-  owners      = ["973714476881"]
+  owners      = ["318042291266"]
   most_recent = true
   name_regex  = "Centos-8-DevOps-Practice"
 }
