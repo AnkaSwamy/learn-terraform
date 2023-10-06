@@ -7,6 +7,7 @@ resource "aws_instance" "web" {
     Name = var.name
   }
 
+
 }
 
 resource "null_resource" "ansible" {
